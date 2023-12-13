@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>task28</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        nav .logo {
+            width: 100px;
+            height: 50px;
+            margin-left: 20%;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .anchor a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+
+
+        select {
+            border: none;
+            font-weight: 500;
+            padding-left: 2%;
+            padding-top: 0.5%;
+            font-size: 10px;
+            background-color: transparent;
+        }
+
+        .anchor button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            width: 100px;
+            padding: 5px 0 5px 0;
+
+        }
+
+        .anchor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section1 {
+            background-image: url(navbar/bg-image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .section2 {
+            padding: 40% 0 10% 5%;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .section3 {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            padding-top: 3%;
+
+        }
+
+        .heading {
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        .img1 {
+
+            width: 250px;
+            height: 150px;
+            overflow: hidden;
+
+        }
+
+        .content {
+            padding-top: 5%;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+
+        }
+
+        img:hover {
+            transform: scale(1.5);
+        }
+
+        .img h6 {
+            padding-top: 2%;
+        }
+
+        .section4 {
+            background-image: url(sales/image.jpg);
+            background-size: cover;
+        }
+
+        .child1 {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 25%;
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        .child1 h1 {
+            color: #1277D4;
+            font-size: 45px;
+            margin: 10px 0px 10px 0px;
+        }
+
+        .child1 h3 {
+            color: rgb(110, 108, 108);
+        }
+
+        .section4 button {
+            color: white;
+            background-color: #1B85EA;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+
+        .section5 {
+            background-color: #DADADF;
+            padding: 40px 0px 40px 0px;
+        }
+
+        .section5 .section5-child {
+            width: 60%;
+            margin: auto;
+            display: flex;
+
+        }
+
+        .sale .facilities {
+            width: 35%;
+        }
+
+        .sale {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .facilities i {
+            font-size: 35px;
+            margin: 0px 0px 20px 0px;
+            color: #2284E0;
+        }
+
+        .facilities h4 {
+            color: rgb(150, 146, 146);
+            margin-bottom: 20px;
+        }
+
+        .facilities p {
+            color: rgb(150, 146, 146);
+            margin: 0px 0px 20px 0px;
+        }
+
+        .feature {
+            width: 40%;
+        }
+
+        .feature p {
+            color: #1277D4;
+            font-size: 35px;
+            margin-top: 20px;
+        }
+
+        .feature h4 {
+            color: rgb(154, 150, 150);
+        }
+
+        .section6-top {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 5%;
+        }
+
+        .sec6tl {
+            background-image: url(product/image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 320px;
+            height: 290px;
+        }
+
+        .bgc {
+            overflow: hidden;
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+        }
+
+        .bgc:hover p {
+            opacity: 1;
+            transition-duration: 2s;
+        }
+
+
+        .bgc:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+
+            overflow: hidden;
+        }
+
+        .bgc p {
+            opacity: 0;
+            text-align: center;
+            padding-top: 50%;
+            padding-bottom: 35%;
+            font-size: 25px;
+        }
+
+        .price {
+            text-align: center;
+        }
+
+        .sec6tl2 {
+            background-image: url(product/image1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 320px;
+            height: 290px;
+
+        }
+
+        .sec6tl3 {
+            background-image: url(product/image3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 320px;
+            height: 290px;
+
+        }
+
+        .sec6tl4 {
+            background-image: url(product/image4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 320px;
+            height: 290px;
+
+        }
+
+        .sec7 {
+            margin-top: 5%;
+            background-color: rgb(209, 209, 209);
+        }
+
+        .heading7 {
+            padding-top: 5%;
+        }
+
+        .parent7 {
+            display: flex;
+            justify-content: center;
+            padding-top: 3%;
+            gap: 80px;
+        }
+
+        .child {
+            width:1 ;
+        }
+        .price p{padding-top: 1;}
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="section1">
+        <nav>
+            <div class="logo">
+                <img src="navbar/logo.png" alt="">
+
+            </div>
+            <div class="anchor">
+                <a href="">Home</a>
+
+                <select name="" id="">
+                    <option value="">LIVE DEMO</option>
+                    <option value="">clothing store</option>
+                    <option value="">food store</option>
+                </select>
+                <select name="" id="">
+                    <option value="">LIVE DEMO BLOCK </option>
+                    <option value="">content</option>
+                    <option value="">header</option>
+                    <option value="">sidebar</option>
+
+                </select>
+                <button>buy now</button>
+            </div>
+
+        </nav>
+        <div class="section2">
+            <h1>Clothing
+                <Br>
+                Store
+                </Br>
+            </h1>
+            <h5 style="color: blue;">
+                Clothing Website Template
+            </h5>
+        </div>
+    </div>
+    <div class="heading">
+        <h2 style="color: blue;">
+            About Us
+        </h2>
+    </div>
+
+    <div class="section3">
+        <div class="child">
+            <div class="img1">
+                <img src="about/image1.jpg" alt="">
+            </div>
+            <div class="content">
+                <p style="color: grey;">Prices</p>
+                <h3 style="color: blue;">Best prices</h3>
+                <p style="color: grey;">Lorem ipsum dolor sit amet
+                    <br>
+                    consect etur adipi sic
+                    <br>
+                    Tempore ea quod volup tates
+                    <br>
+                    cupditate harum! Maiores
+                    <br>
+                    distinctio cumque natus
+                </p>
+                <h6 style="color: grey;">Learn More</h6>
+            </div>
+        </div>
+
+
+        <div class="child">
+            <div class="img1">
+                <img src="about/image2.jpg" alt="">
+            </div>
+            <div class="content">
+                <p style="color: grey;">Prices</p>
+                <h3 style="color: blue;">Best prices</h3>
+                <p style="color: grey;">Lorem ipsum dolor sit amet
+                    <br>
+                    consect etur adipi sic
+                    <br>
+                    Tempore ea quod volup tates
+                    <br>
+                    cupditate harum! Maiores
+                    <br>
+                    distinctio cumque natus
+                </p>
+                <h6 style="color: grey;">Learn More</h6>
+            </div>
+        </div>
+        <div class="child">
+            <div class="img1">
+                <img src="about/image3.jpg" alt="">
+            </div>
+            <div class="content">
+                <p style="color: grey;">Prices</p>
+                <h3 style="color: blue;">Best prices</h3>
+                <p style="color: grey;">Lorem ipsum dolor sit amet
+                    <br>
+                    consect etur adipi sic
+                    <br>
+                    Tempore ea quod volup tates
+                    <br>
+                    cupditate harum! Maiores
+                    <br>
+                    distinctio cumque natus
+                </p>
+                <h6 style="color: grey;">Learn More</h6>
+            </div>
+        </div>
+
+    </div>
+    <div class="section4">
+        <div class="child1">
+            <h3>WE ARE GLAD TO SEE YOU</h3>
+            <h1>SALE TO -70% LAST 2 DAYS</h1>
+            <button>WATCH NOW</button>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="section5-child">
+            <div class="feature">
+                <h4>FEATURES</h4>
+                <p>Feature Our Store</p>
+            </div>
+            <div class="sale">
+                <div class="facilities">
+                    <i class="fa-solid fa-tag fa-rotate-90"></i>
+                    <h4>Sale</h4>
+                    <p>Check our best Sales and Discounts</p>
+                </div>
+                <div class="facilities">
+                    <i class="fa-solid fa-truck"></i>
+                    <h4>Delivery</h4>
+                    <p>Check our best Sales and Discounts</p>
+                </div>
+                <div class="facilities">
+                    <i class="fa-regular fa-heart"></i>
+                    <h4>Our Clients</h4>
+                    <p>Check our best Sales and Discounts</p>
+                </div>
+                <div class="facilities">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <h4>Warranty</h4>
+                    <p>Check our best Sales and Discounts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product" style="text-align: center;padding-top: 5%;">
+        <h4 style="color: #2284E0;font-size: 40px;font-weight: 300;">
+            Our Products
+        </h4>
+    </div>
+
+    <div class="section6-top">
+        <div class="sec6tl">
+            <div class="bgc">
+                <p>
+                    Shirt
+                </p>
+
+            </div>
+            <div class="price">
+                <p style="color: #2284E0;">
+                    Shirt
+                </p>
+                <p>
+                    $ 69.99
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sec6tl2">
+            <div class="bgc">
+                <p>
+                    Light Shirt
+                </p>
+
+            </div>
+            <div class="price">
+                <p style="color: #2284E0;">
+                    Light Shirt
+                </p>
+                <p>
+                    $ 89.99
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section6-top">
+        <div class="sec6tl3">
+            <div class="bgc">
+                <p>
+                    Jacket
+                </p>
+
+            </div>
+            <div class="price">
+                <p style="color: #2284E0;">
+                    Jacket
+                </p>
+                <p>
+                    $ 129.99
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sec6tl4">
+            <div class="bgc">
+                <p>
+                    Denim Shirt
+                </p>
+
+            </div>
+            <div class="price">
+                <p style="color: #2284E0;">
+                    Denim Shirt
+                </p>
+                <p>
+                    $ 179.99
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="sec7">
+        <div class="heading7">
+            <h3 style="color: #2284E0;font-size: 30px;font-weight: 300;text-align: center;">
+                Be the first to know?
+            </h3>
+
+        </div>
+        <div class="parent7">
+            <div class="child7">
+                <h2 style="font-weight: lighter;">
+                    Subscribe Now
+                </h2>
+            </div>
+            <div>
+                <h3 style="color: grey;font-weight: 100;">
+                    * invite a friend and get a dscount-10%
+                </h3>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
